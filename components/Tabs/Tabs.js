@@ -1,14 +1,14 @@
 
 class TabLink {
-  constructor(element) {
+  constructor(link) {
     // Assign this.element to the passed in DOM element
-    // this.element;
+    this.link = link
     
     // Get the custom data attribute on the Link
-    // this.data;
+    this.data = link.dataset
     
     // Using the custom data attribute get the associated Item element
-    // this.itemElement;
+    this.itemElement = 
     
     // Using the Item element, create a new instance of the TabItem class
     // this.tabItem;
@@ -59,4 +59,9 @@ class TabItem {
 
 */
 
-links = document.querySelectorAll();
+// Step 1: Get our DOM elements and store them in links
+ links = document.querySelectorAll('.tabs-link')
+
+// Step 2: Iterate over the Nodelist and create a new object
+links.forEach(link => new TabLink(link))
+
