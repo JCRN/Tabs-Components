@@ -3,7 +3,6 @@
   position: absolute;
   left: 25px;
   cursor: pointer;
-  
   .dropdown-button {
     padding: 15px;
     border: 3px solid @white;
@@ -14,7 +13,6 @@
       background-color: @lambda-light-red;
     }
   }
-  
   .dropdown-content {
     width: 100%;
     position: absolute;
@@ -24,8 +22,8 @@
     align-items: center;  
     margin-top: 10px;
     border: 2.5px solid @lambda-red;
+    animation: easy 450ms linear
   }
-  
   .dropdown-link {
     width: 100%;
     text-align: center;
@@ -33,15 +31,25 @@
     font-size: 18px;
     text-decoration: none;
     color: @lambda-red;
+    
     &:hover {
       color: @white;
       background-color: @lambda-red;
     }
   }
-  
   .dropdown-hidden {
     display: none;
   }
+
+  @keyframes easy {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
 }
 
 

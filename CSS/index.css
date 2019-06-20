@@ -28,6 +28,7 @@
   align-items: center;
   margin-top: 10px;
   border: 2.5px solid #931d25;
+  animation: easy 450ms linear;
 }
 .dropdown .dropdown-link {
   width: 100%;
@@ -43,6 +44,14 @@
 }
 .dropdown .dropdown-hidden {
   display: none;
+}
+@keyframes easy {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .tabs {
   width: 100%;

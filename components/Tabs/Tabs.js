@@ -1,4 +1,3 @@
-
 class TabLink {
   constructor(link) {
     // Assign this.element to the passed in DOM element

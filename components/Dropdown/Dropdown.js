@@ -20,6 +20,9 @@ class Dropdown {
     
     // Toggle the ".dropdown-hidden" class off and on
     this.content.classList.toggle('dropdown-hidden')
+
+    // Toggle the '.dropdown-expand' class off and on
+    this.content.classList.toggle('dropdown-expand')
   }
 }
 
