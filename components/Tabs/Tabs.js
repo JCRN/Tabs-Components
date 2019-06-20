@@ -1,5 +1,5 @@
 
-class Link {
+class TabLink {
   constructor(link) {
     // Assign this.element to the passed in DOM element
     this.link = link
@@ -11,7 +11,7 @@ class Link {
     this.item = document.querySelector(`.tabs-item[data-tab='${this.link.dataset.tab}']`)
     
     // Using the Item element, create a new instance of the TabItem class
-    this.item = new Item(this.item)
+    this.item = new TabItem(this.item)
     
     // Add a click event listener on this instance, calling the select method on click
     this.link.addEventListener('click', event => this.select())
@@ -33,7 +33,7 @@ class Link {
   }
 }
 
-class Item {
+class TabItem {
   constructor(item) {
     // Assign this.element to the passed in element
     this.item = item    
@@ -61,9 +61,9 @@ class Item {
 
 */
 
-// Step 1: Get DOM elements and store them in links
+// Get DOM elements and store them in links
 links = document.querySelectorAll('.tabs-link')
 
-// Step 2: Iterate over the Nodelist and create a new object for each link in the Nodelist
-links.forEach(link => new Link(link))
+// Iterate over the Nodelist and create a new object for each item in the Nodelist
+links.forEach(link => new TabLink(link))
 
