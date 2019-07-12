@@ -22,6 +22,7 @@
     align-items: center;  
     margin-top: 10px;
     border: 2.5px solid @lambda-red;
+    animation: easy 450ms linear
   }
   .dropdown-link {
     width: 100%;
@@ -30,6 +31,7 @@
     font-size: 18px;
     text-decoration: none;
     color: @lambda-red;
+    
     &:hover {
       color: @white;
       background-color: @lambda-red;
@@ -38,6 +40,16 @@
   .dropdown-hidden {
     display: none;
   }
+
+  @keyframes easy {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
 }
 
 
